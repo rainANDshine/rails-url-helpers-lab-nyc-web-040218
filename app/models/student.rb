@@ -6,6 +6,6 @@ class Student < ActiveRecord::Base
   end
 
   def set_default
-    self.active ||= false
+    self.active = false if !defined?(self.active)
   end
 end
