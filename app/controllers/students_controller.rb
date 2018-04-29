@@ -6,11 +6,11 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = self.set_student
+    @student = set_student
   end
 
   def activate
-    @student = self.set_student
+    @student = set_student
     if @student.active
       @student.active = false
     else
