@@ -6,7 +6,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    self.set_student
+    @student = self.set_student
   end
 
   def activate
