@@ -8,4 +8,9 @@ class Student < ActiveRecord::Base
   def set_default
     self.active = false if !defined?(self.active) #if self.active.nil?
   end
+
+  def status
+    "active" if self.active
+    "inactive" if !self.active
+  end
 end
